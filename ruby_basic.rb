@@ -1,8 +1,10 @@
+# Write Ruby program to get ruby version with patch number.
 def exercise_1
     p "Ruby Version: "+RUBY_VERSION
     p "Ruby Patch Level: "+RUBY_PATCHLEVEL.to_s
 end
 
+# Write a Ruby program to display the current date and time.
 require 'date'
 def exercise_2
     current_time = DateTime.now
@@ -10,10 +12,14 @@ def exercise_2
     p "Current Date and Time: "+ current_date_time
 end
 
+# Write a Ruby program to create a new string which is n copies of a given string where n is a non-negative integer.
+# Input: ("a", 3)
+# Output: "aaa"
 def exercise_3 (string,n)
     return string*n
 end
 
+# Write a Ruby program which accept the radius of a circle from the user and compute the parameter and area.
 def exercise_4 
     p "Input the radius of the circle: "
     r = gets.chomp().to_f
@@ -23,11 +29,15 @@ def exercise_4
     p "The area is #{area}"
 end
 
+# Write a Ruby program to check whether a string starts with "if"
+# Input: "if"
+# Output: true
 def exercise_5(str)
     return str[0,2] == "if" ? true : false
 #   return str.start_with?("if") ? true : false
 end
 
+# Write a Ruby program which accept the user's first and last name and print them in reverse order with a space between them.
 def exercise_6 
     p "Input your first name: "
     f_name = gets.chomp
@@ -36,6 +46,7 @@ def exercise_6
     p "Hello #{l_name} #{f_name}"   
 end
 
+# Write a Ruby program to accept a filename from the user print the extension of that.
 def exercise_7
     file = gets.chomp
 # file name
@@ -60,6 +71,7 @@ def exercise_8
     l_name = gets.chomp
     p "Hello #{l_name} #{f_name}"
 end
+
 
 def exercise_9(a,b,c)
     if ((!(a >= 1 && a <= 10)) && (!(b>= 1 && b<=10)) && (!(c>= 1 && c<=10)) )
@@ -323,34 +335,37 @@ def exercise_51 (a,b)
 end
 
 def exercise_52 (a,b,c)
+    if a==b && b==c
+        return 0
+    end
     if a == b
-        c
+        return c
     end
     if a == c 
-        b
+        return b
     end
     if b == c
-        a
+        return a
     end
     a+b+c
 end
 
 def exercise_53 (a,b,c)
     if a == 17
-        0
+        return 0
     end
     if b == 17
-        a
+        return a
     end
     if c ==17
-        a+b
+        return a+b
     end
-    a+b+c
+        a+b+c
 end
 
 def exercise_54 (x,y,z)
     if (y-z).abs <3 
-        false
+        return false
     end
     (x-y).abs <= 1 && (x-z).abs >= 3 || (x-z).abs <= 1 && (x-y).abs >= 3 ? true : false
 end
