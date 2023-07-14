@@ -1,82 +1,82 @@
-def exercise_1(str1, str2)
-        "<#{str1}> #{str2} </#{str1}>"
+def exercise_1(stringing1, string2)
+        "<#{string1}> #{string2} </#{string1}>"
 end
 
-def exercise_2 (str1, str2)
-    n = str1.length/2 
-    str1[0..n-1].concat(str2)<<str1[n...str1.length]
+def exercise_2 (string1, string2)
+    n = string1.length/2 
+    string1[0..n-1].concat(string2)<<string1[n...string1.length]
 end
 
-def exercise_3 str
-    p str.upcase
-    p str.downcase
-    p str.capitalize
+def exercise_3 string
+    p string.upcase
+    p string.downcase
+    p string.capitalize
 end
 
-def exercise_4 (str1,str2)
-    if str1.include? str2
+def exercise_4 (string1,string2)
+    if string1.include? string2
         p "Substring present in the string."
     end
         p "Substring not present in the string."
 end 
 
-def exercise_5 (str1)
-    str1.gsub!(/\s+/,"")
+def exercise_5 (string1)
+    string1.gsub!(/\s+/,"")
 end
 
-def exercise_6 (n, str)
-    n.times do str.chop! end
-    return str
+def exercise_6 (n, string)
+    n.times do string.chop! end
+    return string
 end
 
-def exercise_7 (str)
-    str.split("")    
+def exercise_7 (string)
+    string.split("")    
 end
 
-def exercise_8 (str1, str2)
-    str1.gsub!(str2,"")
+def exercise_8 (string1, string2)
+    string1.gsub!(string2,"")
 end
 
-def exercise_9 (str1,str2)
-    str1.start_with?(str2)
+def exercise_9 (string1,string2)
+    string1.start_with?(string2)
 end
 
-def exercise_10 (str1,str2)     
-    str1.count(str2)
+def exercise_10 (string1,string2)     
+    string1.count(string2)
 end
 
-def exercise_11 (str1)
-    str1.chars.sort.join
+def exercise_11 (string1)
+    string1.chars.sort.join
 end
 
-def exercise_12 (str,chr)
-    str.delete(chr)
+def exercise_12 (string,char)
+    string.delete(char)
 end
 
-def exercise_13(str,chr)
-    str.delete(chr)
+def exercise_13(string,char)
+    string.delete(char)
 end
 
-def exercise_14 (str)
-    str[2...-2]
+def exercise_14 (string)
+    string[2...-2]
 end
 
-def exercise_15 (str,n)
-    str[n...-1]
+def exercise_15 (string,n)
+    string[n...-1]
 end
 
-def exercise_16 (str)   
-    str.lines.count
+def exercise_16 (string)   
+    string.lines.count
 end
 
-def exercise_17 (str,n)
-    str[0..n-1]
+def exercise_17 (string,n)
+    string[0..n-1]
 end
 
-def exercise_18 (str,chr)
-    if str.start_with?(chr)
-        return str.delete(chr)
+def exercise_18 (string,char)
+    if string.start_with?(char)
+        return string.delete(char)
     end
-        return str
+        return string
 end
 

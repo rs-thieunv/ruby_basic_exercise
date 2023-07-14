@@ -1,10 +1,8 @@
-# Write Ruby program to get ruby version with patch number.
 def exercise_1
     p "Ruby Version: "+RUBY_VERSION
     p "Ruby Patch Level: "+RUBY_PATCHLEVEL.to_s
 end
 
-# Write a Ruby program to display the current date and time.
 require 'date'
 def exercise_2
     current_time = DateTime.now
@@ -12,14 +10,10 @@ def exercise_2
     p "Current Date and Time: "+ current_date_time
 end
 
-# Write a Ruby program to create a new string which is n copies of a given string where n is a non-negative integer.
-# Input: ("a", 3)
-# Output: "aaa"
 def exercise_3 (string,n)
-    return string*n
+    string*n
 end
 
-# Write a Ruby program which accept the radius of a circle from the user and compute the parameter and area.
 def exercise_4 
     p "Input the radius of the circle: "
     r = gets.chomp().to_f
@@ -29,15 +23,11 @@ def exercise_4
     p "The area is #{area}"
 end
 
-# Write a Ruby program to check whether a string starts with "if"
-# Input: "if"
-# Output: true
-def exercise_5(str)
-    return str[0,2] == "if" ? true : false
-#   return str.start_with?("if") ? true : false
+def exercise_5(string)
+    string[0,2] == "if" ? true : false
+#   return string.start_with?("if") ? true : false
 end
 
-# Write a Ruby program which accept the user's first and last name and print them in reverse order with a space between them.
 def exercise_6 
     p "Input your first name: "
     f_name = gets.chomp
@@ -46,7 +36,6 @@ def exercise_6
     p "Hello #{l_name} #{f_name}"   
 end
 
-# Write a Ruby program to accept a filename from the user print the extension of that.
 def exercise_7
     file = gets.chomp
 # file name
@@ -84,9 +73,9 @@ end
 
 def exercise_10(a,b,c)
     if ((a >= 1 && a <= 10) && (b>= 1 && b<=10) && (c>= 1 && c<=10) ) || (!(a >= 1 && a <= 10)) && (!(b>= 1 && b<=10)) && (!(c>= 1 && c<=10)) 
-        p false
+        return false
     else
-        p true
+        return true
     end
 end
 
@@ -109,12 +98,12 @@ puts <<~HEREDOC
 HEREDOC
 end
 
-def exercise_12 (str)
-    return str[0,2] == "if" ?  str : "if "<<str
+def exercise_12 (string)
+    string[0,2] == "if" ?  string : "if "<<string
 end
 
-def exercise_13 (str , n)
-    return str.length < 3 ? str * n : str[0,3] * n
+def exercise_13 (string , n)
+    string.length < 3 ? string * n : string[0,3] * n
 end
 
 def exercise_14 
@@ -124,27 +113,27 @@ def exercise_14
     p "The volume of the sphere is : #{the_volume}"
 end
 
-def exercise_15 (str)
-    n = str.length
-    return n == 0 ? nil : str[n-1].concat(str[1..n-2])<<str[0]
+def exercise_15 (string)
+    n = string.length
+    n == 0 ? nil : string[n-1].concat(string[1..n-2])<<string[0]
 end
 
 def exercise_16
     p "Input your age: "
     age = gets.chomp.to_i
-    return age < 18 ? ("You are a minor") : true
+    age < 18 ? ("You are a minor") : true
 end
 
 def exercise_17 (n)    
-    return n < 33 ? (n-33).abs : ((n-33).abs)*2  
+    n < 33 ? (n-33).abs : ((n-33).abs)*2  
 end
 
 def exercise_18 (x,y)
-    return x > y ? x : y
+    x > y ? x : y
 end
 
 def exercise_19 (x,y)   
-    return (x == 20 || y == 20) ?  true : x + y
+    (x == 20 || y == 20) ?  true : x + y
 end
 
 def exercise_20 (x,y,z)
@@ -159,7 +148,7 @@ def exercise_20 (x,y,z)
 end
 
 def exercise_21 (n)
-    (n-100).abs <= 10 || (n-200).abs <= 10    
+    (n-100).abs <= 10 || (n-200).abs <= 10 ? true : false   
 end
 
 def exercise_22 (x,y)
@@ -172,9 +161,9 @@ def exercise_23
     end       
 end
 
-def exercise_24 (str)
-    n = str.length - 1
-    str[n].concat(str)<<str[n]
+def exercise_24 (string)
+    n = string.length - 1
+    string[n].concat(string)<<string[n]
 end
 
 def exercise_25 (temp1,temp2)
@@ -199,8 +188,8 @@ def exercise_28
     end   
 end
 
-def exercise_29 (arr)
-    arr.each{|value| p value}
+def exercise_29 (array)
+    array.each{|value| p value}
 end
 
 def exercise_30 (a,b)
@@ -211,7 +200,7 @@ def exercise_31
     sum  = 0
     h = {Literature: 74, Science: 89, Math: 91}
     h.each{|key,value| sum += value}
-    p sum
+    return sum
 end
 
 def exercise_32 (char)
@@ -222,21 +211,21 @@ def exercise_33 (n)
     n % 400 == 0 || ( n % 4 == 0 && n% 100 != 0) ? "#{n} is leap year" : "#{n} is not leap year"
 end
 
-def exercise_34 str
-    str.start_with?("Java") ? str.gsub("Java","") : str
+def exercise_34 (string)
+    string.start_with?("Java") ? string.gsub("Java","") : string
 end
 
-def exercise_35 str
-    str.start_with?("ps") ? "ps" : ""    
+def exercise_35 (string)
+    string.start_with?("ps") ? "ps" : ""    
 end
 
 def exercise_36 (a,b)
     if ((a-10).abs < (b-10).abs)
-        a
+        return a
     elsif ((a-10).abs > (b-10).abs) 
-        b
+        return b
     else
-        0
+        return 0
     end
 end
 
@@ -246,16 +235,16 @@ end
 
 def exercise_38 (a,b)
     if (a>= 20 && a <= 30) && (a>b)
-        a
+        return a
     elsif (a>= 20 && a <= 30) && (a<b)
-        b
+        return b
     else
-        0        
+        return 0        
     end
 end
 
-def exercise_39 str
-    str.include?"i"
+def exercise_39 (string)
+    string.include?"i"
 end
 
 # de` va output khac nhau nen em lam theo de
@@ -263,32 +252,32 @@ def exercise_40 (a,b)
     a.digits[0] ==  b.digits[0] ? true : false
 end
 
-def exercise_41 ( arr)
-    if arr.empty?
-        nil
+def exercise_41 ( array)
+    if array.empty?
+        return nil
     end
-    arr.count 5
+    array.count 5
 end
 
-def exercise_42 arr
-    n = arr.size
+def exercise_42 (array)
+    n = array.size
     if n < 5
-        p (arr[0..n].count 7) >= 1 ? true : false 
+        return (array[0..n].count 7) >= 1 ? true : false 
     else
-        p (arr[0..5].count 7) >= 1? true : false
+        return (array[0..5].count 7) >= 1? true : false
     end
 
 end
 
-def exercise_43 arr
+def exercise_43 (array)
     index = 0
-    n = arr.length
+    n = array.length
     if n == 0
-        false
+        return false
     end
     while index < n-2
-        if arr[index..index+2] == [10,20,30]
-            true
+        if array[index..index+2] == [10,20,30]
+            return true
         end
         index += 1
     end
@@ -304,7 +293,7 @@ def exercise_45 (a,b)
     a == 11 || b== 11 || a+ b ==11 || a-b == 11 ? true : false 
 end
 
-def exercise_46 num
+def exercise_46 (num)
     num % 10 <= 2 || num %10 >= 8 ? true : false
 end
 
@@ -322,11 +311,11 @@ end
 
 def exercise_50 (a,b)
     if a% 5 == b %5 
-        a >b ? b : a        
+        return a >b ? b : a        
     elsif a == b
-        0        
+        return 0        
     else
-        a >b ? a : b
+        return a >b ? a : b
     end
 end
 
@@ -371,7 +360,7 @@ def exercise_54 (x,y,z)
 end
 
 def exercise_55 (a,b,c)
-    arr = [a,b,c].sort
-    (arr[1] - arr[0]).abs == (arr[2]-arr[1]).abs ? true : false
+    array = [a,b,c].sort
+    (array[1] - array[0]).abs == (array[2]-array[1]).abs ? true : false
 end
 
